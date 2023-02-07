@@ -1,16 +1,48 @@
-# article_daily
 
-A new Flutter project.
+# Article Daily
 
-## Getting Started
+A news recommendation app built with Flutter.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+
+
+<img src="design_screenshot.png" width="75%" alt="A screenshot showing ArticleDaily's screens">
+
+## Running
+
+
+1. Clone the repository
+
+    ```bash
+    git clone https://github.com/scorpiobish/article_daily.git
+    ```
+
+2. Cd into the folder
+
+    ```bash
+    cd article_daily
+    ```
+       
+3. Run the app
+
+    ```bash
+    flutter run 
+    ```
+    
+# Author
+
+Nancy Chizea - chizeanancy@gmail.com
+
+Project Link: [https://github.com/scorpiobish/article_daily](https://github.com/scorpiobish/article_daily)
+
+
+
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+

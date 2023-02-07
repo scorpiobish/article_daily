@@ -32,7 +32,7 @@ A news recommendation app built with Flutter.
     flutter run 
     ```
     
-# Author
+## Author
 
 Nancy Chizea - chizeanancy@gmail.com
 

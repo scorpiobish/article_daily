@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'home.dart';
+import 'general.dart';
 
 class Splash extends StatefulWidget {
   const Splash({
@@ -21,7 +21,7 @@ class _SplashState extends State<Splash> {
     Future.delayed(Duration(seconds: 3), (() {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => Home()),
+        MaterialPageRoute(builder: (context) => General()),
       );
     }));
   }

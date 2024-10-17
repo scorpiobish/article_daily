@@ -63,7 +63,7 @@ class TodaysArticles extends StatelessWidget {
                           textStyle: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w600,
-                              height: 25 / 20,
+                              height: 30 / 20,
                               color: Colors.white),
                         ),
                       ),
@@ -89,7 +89,7 @@ class TodaysArticles extends StatelessWidget {
                               textStyle: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w500,
-                                  height: 17.5 / 14,
+                                  height: 20 / 14,
                                   color: Colors.white.withOpacity(0.60)),
                             ),
                           ),
@@ -105,7 +105,7 @@ class TodaysArticles extends StatelessWidget {
                           textStyle: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w400,
-                              height: 20 / 16,
+                              height: 22 / 16,
                               color: Colors.white),
                         ),
                       ),
@@ -138,7 +138,7 @@ class TodaysArticles extends StatelessWidget {
                           textStyle: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w600,
-                              height: 25 / 20,
+                              height: 30 / 20,
                               color: Colors.white),
                         ),
                       ),
@@ -180,7 +180,7 @@ class TodaysArticles extends StatelessWidget {
                           textStyle: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w400,
-                              height: 20 / 16,
+                              height: 22 / 16,
                               color: Colors.white),
                         ),
                       ),

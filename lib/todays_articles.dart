@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TodaysArticles extends StatelessWidget {
-  const TodaysArticles({Key? key}) : super(key: key);
+  const TodaysArticles({super.key});
 
   @override
   Widget build(BuildContext context) {

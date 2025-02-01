@@ -6,8 +6,8 @@ import 'general.dart';
 
 class Splash extends StatefulWidget {
   const Splash({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<Splash> createState() => _SplashState();

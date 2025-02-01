@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class General extends StatefulWidget {
+  const General({super.key});
+
   @override
   State<General> createState() => _GeneralState();
 }

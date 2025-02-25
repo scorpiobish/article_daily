@@ -1,5 +1,6 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
+import 'package:lucide_icons/lucide_icons.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -30,9 +31,10 @@ class Profile extends StatelessWidget {
                 Align(
                   alignment: Alignment.topLeft,
                   child: Container(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 30.0, horizontal: 13),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(32),
+                      borderRadius: BorderRadius.circular(30),
                       color: Color(0xff0665FF),
                       //  Align(
                       //   alignment: Alignment.centerLeft,
@@ -70,10 +72,12 @@ class Profile extends StatelessWidget {
                                         color: Colors.white),
                                     child: Text(
                                       'PRO',
-                                      style: TextStyle(
-                                        color: Color(0xff0665FF),
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w600,
+                                      style: GoogleFonts.quicksand(
+                                        textStyle: const TextStyle(
+                                          color: Color(0xff0665FF),
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w600,
+                                        ),
                                       ),
                                     ))
                               ],
@@ -84,69 +88,104 @@ class Profile extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                             Expanded(
-                              child: Container(
-                                  padding: const EdgeInsets.fromLTRB(
-                                      22.0, 6.0, 21.0, 7.0),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white.withOpacity(0.1)),
-                                  child: Text.rich(
-                                    TextSpan(
-                                      text: '28\n',
-                                      style: TextStyle(
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                      children: [
-                                        TextSpan(
-                                          text: 'Days Streak',
-                                          style: TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400),
-                                        ),
-                                      ],
-                                    ),
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 50,
-                                    ),
-                                  )),
-                            ), SizedBox(width: 10.0),
                             Expanded(
                               child: Container(
-                                  padding: const EdgeInsets.fromLTRB(
-                                      22.0, 6.0, 21.0, 7.0),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white.withOpacity(0.1)),
-                                  child: Text.rich(
-                                    TextSpan(
-                                      text: '200\n',
-                                      style: TextStyle(
-                                        fontSize: 24,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                      children: [
-                                        TextSpan(
-                                          text: 'Days Streak',
-                                          style: TextStyle(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400),
+                                padding: const EdgeInsets.fromLTRB(
+                                    10.0, 6.0, 11.0, 7.0),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(6),
+                                    color: Colors.white.withOpacity(0.1)),
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      LucideIcons.flame,
+                                      size: 30.0,
+                                      weight: 11.0,
+                                      color: Color(0xfffb923c),
+                                    ),
+                                    SizedBox(width: 14.0),
+                                    Text.rich(
+                                      TextSpan(
+                                        text: '28\n',
+                                        style: TextStyle(
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.w600,
                                         ),
-                                      ],
+                                        children: [
+                                          TextSpan(
+                                            text: 'Days Streak',
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w500,
+                                                fontStyle: FontStyle.italic),
+                                          ),
+                                        ],
+                                      ),
+                                      style: GoogleFonts.quicksand(
+                                        textStyle: TextStyle(
+                                          color: Colors.white,
+                                        ),
+                                      ),
                                     ),
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 50,
+                                  ],
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10.0),
+                            Expanded(
+                              child: Container(
+                                padding: const EdgeInsets.fromLTRB(
+                                    10.0, 6.0, 11.0, 7.0),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(6),
+                                    color: Colors.white.withOpacity(0.1)),
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      LucideIcons.newspaper,
+                                      size: 27.0,
+                                      weight: 13.0,
+                                      color: Colors.white.withOpacity(0.8),
                                     ),
-                                  )),
+                                    SizedBox(width: 16.0),
+                                    Text.rich(
+                                      TextSpan(
+                                        text: '200\n',
+                                        style: TextStyle(
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                        children: [
+                                          TextSpan(
+                                            text: 'Articles read',
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w500,
+                                                fontStyle: FontStyle.italic),
+                                          ),
+                                        ],
+                                      ),
+                                      style: GoogleFonts.quicksand(
+                                        textStyle: TextStyle(
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             )
                           ],
                         )
                       ],
                     ),
                   ),
+                ),
+                SizedBox(
+                  height: 44.0,
+                ),
+                ListTile(
+                  leading: Icon(LucideIcons.info), title: Text('About', style: GoogleFonts.quicksand(fontSize: 16)), 
                 )
               ]),
             ),

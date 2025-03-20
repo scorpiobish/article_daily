@@ -2,7 +2,6 @@ import 'package:article_daily/profile.dart';
 import 'package:article_daily/saved.dart';
 import 'package:article_daily/todays_articles.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class General extends StatefulWidget {
   const General({super.key});
@@ -26,6 +25,7 @@ class _GeneralState extends State<General> {
       _currentIndex = selectedIndex;
     });
 
+    // ignore: avoid_print
     print('current index is $_currentIndex');
   }
 

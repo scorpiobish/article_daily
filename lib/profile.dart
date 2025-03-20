@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
@@ -8,7 +9,7 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xffF5F8FA),
+        backgroundColor: const Color(0xffF5F8FA),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
@@ -27,7 +28,7 @@ class Profile extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 25.0),
+                const SizedBox(height: 25.0),
                 Align(
                   alignment: Alignment.topLeft,
                   child: Container(
@@ -35,20 +36,18 @@ class Profile extends StatelessWidget {
                         vertical: 30.0, horizontal: 13),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: Color(0xff0665FF),
-                      //  Align(
-                      //   alignment: Alignment.centerLeft,
+                      color: const Color(0xff0665FF),
                     ),
                     child: Column(
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            CircleAvatar(
+                            const CircleAvatar(
                               radius: 45,
                               backgroundImage: AssetImage('assets/avatar.jpeg'),
                             ),
-                            SizedBox(width: 21.0),
+                            const SizedBox(width: 21.0),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               verticalDirection: VerticalDirection.down,
@@ -63,7 +62,7 @@ class Profile extends StatelessWidget {
                                         color: Colors.white),
                                   ),
                                 ),
-                                SizedBox(height: 9.0),
+                                const SizedBox(height: 9.0),
                                 Container(
                                     padding: const EdgeInsets.fromLTRB(
                                         7.0, 2.0, 7.0, 1.0),
@@ -84,7 +83,7 @@ class Profile extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(height: 21.0),
+                        const SizedBox(height: 21.0),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
@@ -97,22 +96,22 @@ class Profile extends StatelessWidget {
                                     color: Colors.white.withOpacity(0.1)),
                                 child: Row(
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       LucideIcons.flame,
                                       size: 30.0,
                                       weight: 11.0,
                                       color: Color(0xfffb923c),
                                     ),
-                                    SizedBox(width: 14.0),
+                                    const SizedBox(width: 14.0),
                                     Text.rich(
                                       TextSpan(
                                         text: '28\n',
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           fontSize: 24,
                                           fontWeight: FontWeight.w600,
                                         ),
                                         children: [
-                                          TextSpan(
+                                          const TextSpan(
                                             text: 'Days Streak',
                                             style: TextStyle(
                                                 fontSize: 14,
@@ -122,7 +121,7 @@ class Profile extends StatelessWidget {
                                         ],
                                       ),
                                       style: GoogleFonts.quicksand(
-                                        textStyle: TextStyle(
+                                        textStyle: const TextStyle(
                                           color: Colors.white,
                                         ),
                                       ),
@@ -131,7 +130,7 @@ class Profile extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            SizedBox(width: 10.0),
+                            const SizedBox(width: 10.0),
                             Expanded(
                               child: Container(
                                 padding: const EdgeInsets.fromLTRB(
@@ -147,16 +146,16 @@ class Profile extends StatelessWidget {
                                       weight: 13.0,
                                       color: Colors.white.withOpacity(0.8),
                                     ),
-                                    SizedBox(width: 16.0),
+                                    const SizedBox(width: 16.0),
                                     Text.rich(
                                       TextSpan(
                                         text: '200\n',
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                           fontSize: 24,
                                           fontWeight: FontWeight.w600,
                                         ),
                                         children: [
-                                          TextSpan(
+                                          const TextSpan(
                                             text: 'Articles read',
                                             style: TextStyle(
                                                 fontSize: 14,
@@ -166,7 +165,7 @@ class Profile extends StatelessWidget {
                                         ],
                                       ),
                                       style: GoogleFonts.quicksand(
-                                        textStyle: TextStyle(
+                                        textStyle: const TextStyle(
                                           color: Colors.white,
                                         ),
                                       ),
@@ -181,15 +180,91 @@ class Profile extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 44.0,
+                const SizedBox(
+                  height: 75.0,
                 ),
                 ListTile(
-                  leading: Icon(LucideIcons.info), title: Text('About', style: GoogleFonts.quicksand(fontSize: 16)), 
-                )
-              ]),
+                  leading: const Icon(LucideIcons.info),
+                  title: Text(
+                    'About',
+                    style: GoogleFonts.quicksand(fontSize: 16),
+                  ),
+                  trailing: const Icon(LucideIcons.chevronRight),
+                ),
+                ListTile(
+                  leading: const Icon(LucideIcons.messageCircle),
+                  title: Text(
+                    'Contact Us',
+                    style: GoogleFonts.quicksand(fontSize: 16),
+                  ),
+                  trailing: const Icon(LucideIcons.chevronRight),
+                ),
+                ListTile(
+                  leading: const Icon(LucideIcons.scrollText),
+                  title: Text(
+                    'Terms and policies',
+                    style: GoogleFonts.quicksand(fontSize: 16),
+                  ),
+                  trailing: const Icon(LucideIcons.chevronRight),
+                ),
+                const Divider(
+                  color: Colors.black,
+                  thickness: 0.5,
+                  indent: 16,
+                  endIndent: 20,
+                ),
+                SizedBox(
+                  height: 18,
+                  child: ListTile(
+                    title: Text(
+                      'Version',
+                      style: GoogleFonts.quicksand(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    trailing: Text('0.18.11',
+                        style: GoogleFonts.quicksand(
+                          textStyle: const TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.w300),
+                        )),
+                  ),
+                ),
+                const SizedBox(height: 65), ElevatedButton(onPressed:(){print(
+                        'Logout button tapped'); // i will add to logic later ;)
+                }, child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Icon(LucideIcons.logOut,
+                            color: Colors.white), // Add an icon
+                        const SizedBox(width: 8),
+                        Text(
+                          'Log Out',
+                          style: GoogleFonts.quicksand(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),),
+                // GestureDetector(
+                //   onTap: () {
+                //     print(
+                //         'Logout button tapped'); // i will add to logic later ;)
+                //   },
+                //   child: Container(
+                //     padding: const EdgeInsets.symmetric(
+                //         vertical: 38, horizontal: 319),
+                //     decoration: BoxDecoration(
+                //       color: Color(0xff011B45),
+                //       borderRadius: BorderRadius.circular(8),
+                //     ),
+                    
+                  ]),
+                ),
+              ),
             ),
-          ),
-        ));
+        );
   }
 }

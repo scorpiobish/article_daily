@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
@@ -9,12 +8,13 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xffF5F8FA),
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: SafeArea(
-              child: Column(children: [
+      backgroundColor: const Color(0xffF5F8FA),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: SafeArea(
+            child: Column(
+              children: [
                 Align(
                   alignment: Alignment.topLeft,
                   child: Text(
@@ -181,7 +181,7 @@ class Profile extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 75.0,
+                  height: 43.0,
                 ),
                 ListTile(
                   leading: const Icon(LucideIcons.info),
@@ -215,56 +215,58 @@ class Profile extends StatelessWidget {
                 ),
                 SizedBox(
                   height: 18,
-                  child: ListTile(
-                    title: Text(
-                      'Version',
-                      style: GoogleFonts.quicksand(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    trailing: Text('0.18.11',
-                        style: GoogleFonts.quicksand(
-                          textStyle: const TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.w300),
-                        )),
-                  ),
                 ),
-                const SizedBox(height: 65), ElevatedButton(onPressed:(){print(
+                ListTile(
+                  title: Text(
+                    'Version',
+                    style: GoogleFonts.quicksand(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  trailing: Text('0.18.11',
+                      style: GoogleFonts.quicksand(
+                        textStyle: const TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.w300),
+                      )),
+                ),
+                const SizedBox(height: 70),
+                ElevatedButton(
+                  onPressed: () {
+                    print(
                         'Logout button tapped'); // i will add to logic later ;)
-                }, child: Row(
-                      mainAxisSize: MainAxisSize.min,
+                  },
+                  style: ButtonStyle(
+                      backgroundColor: WidgetStatePropertyAll<Color>(
+                        const Color(0xff011B45),
+                      ),
+                      shape: WidgetStatePropertyAll(RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ))),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Icon(LucideIcons.logOut,
-                            color: Colors.white), // Add an icon
-                        const SizedBox(width: 8),
+                        const Icon(LucideIcons.logOut, color: Colors.white),
+                        const SizedBox(width: 10),
                         Text(
                           'Log Out',
                           style: GoogleFonts.quicksand(
-                            fontSize: 15,
+                            fontSize: 16,
                             fontWeight: FontWeight.w600,
                             color: Colors.white,
                           ),
                         ),
                       ],
-                    ),),
-                // GestureDetector(
-                //   onTap: () {
-                //     print(
-                //         'Logout button tapped'); // i will add to logic later ;)
-                //   },
-                //   child: Container(
-                //     padding: const EdgeInsets.symmetric(
-                //         vertical: 38, horizontal: 319),
-                //     decoration: BoxDecoration(
-                //       color: Color(0xff011B45),
-                //       borderRadius: BorderRadius.circular(8),
-                //     ),
-                    
-                  ]),
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
-        );
+          ),
+        ),
+      ),
+    );
   }
 }
